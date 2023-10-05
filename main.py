@@ -1,15 +1,11 @@
-from flask import Flask, request , jsonify
-import json
-from urllib.parse import unquote
-import pickle
-import numpy as np
-from sklearn.preprocessing import StandardScaler
+from flask import Flask, request , jsonify,render_template
+
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "home"
+    return render_template("index.html")
 
 @app.route('/h',methods=["POST"])
 def predict():
