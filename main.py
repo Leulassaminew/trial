@@ -1,9 +1,5 @@
 from flask import Flask, request , jsonify
 import json
-from urllib.parse import unquote
-import pickle
-import numpy as np
-from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
 
